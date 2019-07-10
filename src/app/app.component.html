@@ -1,0 +1,13 @@
+<h1>Welcome to {{ title }}!</h1>
+
+<div *ngIf="givenName">
+  <h2>Hi, {{ givenName }}!</h2> 
+  <h2>{{ email }}</h2> 
+  <button (click)="logout()">Logout</button>
+</div>
+
+<div *ngIf="!givenName">
+  <button (click)="login()">Login</button>
+</div>
+
+<router-outlet></router-outlet>
